@@ -11,7 +11,7 @@ import {
   top,
   tshirts,
   usPolo,
-} from "../assets";
+} from "../assets/";
 import {
   jumpsuit,
   shirt,

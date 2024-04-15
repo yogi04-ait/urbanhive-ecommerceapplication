@@ -1,17 +1,13 @@
 import React from 'react'
 import Hero from './Hero'
+import NewArrivals from './NewArrivals'
 
 const Shop = () => {
     return (
         <>
             <main className="w-full h-full">
                 <Hero />
-                {/* <NewArrivals />
-                <BigSavingZone />
-                <MenCategories />
-                <WomenCategories />
-                <Brand />
-                <LimeLight /> */}
+                <NewArrivals />
             </main>
         </>
     )

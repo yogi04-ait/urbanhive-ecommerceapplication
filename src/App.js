@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router";
 import Header from "./components/Header";
+import Search from "./components/pages/Search";
 import Shop from "./components/pages/Shop";
 import Footer from "./components/Footer";
 import ProductCategory from "./components/pages/ProductCategory"
@@ -37,6 +38,7 @@ function App() {
           <Route path="/printed-tshirt" element={<PrintedTshirts />} />
           <Route path="/urban-shirt" element={<UrbanTShirts />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/search/:query" element={<Search />} />
           <Route path="/single/:id" element={<SingleNew />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/favorite" element={<Favorite />} />

@@ -4,11 +4,12 @@ import { HiOutlineMenu, HiOutlineShoppingBag } from "react-icons/hi";
 import { MdClose, MdOutlineFavoriteBorder } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   const [toggleMenu, setToggleMenu] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -26,7 +27,7 @@ const Header = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.length > 0) {
-      // navigate(`/search/${searchQuery}`);
+      navigate(`/search/${searchQuery}`);
     }
     setSearchOpen(false);
   };
@@ -86,7 +87,8 @@ const Header = () => {
           </ul>
         </section>
         <section className="w-full h-full flex items-center justify-end gap-5 sm:gap-10">
-          <form className="hidden sm:flex items-center bg-slate-100 px-3 py-2 gap-2">
+          <form className="hidden sm:flex items-center bg-slate-100 px-3 py-2 gap-2"
+          onSubmit={handleSearch} >
             <AiOutlineSearch className="text-gray-500" />
             <input
               type="text"

@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './Hero'
+import Hero from '../Shop/Hero'
 import NewArrivals from '../Shop/NewArrivals'
 import BigSavingZone from '../Shop/BigSavingZone'
 import MenCategories from '../Shop/MenCategories'

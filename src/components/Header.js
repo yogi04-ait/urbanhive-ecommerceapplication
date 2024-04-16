@@ -4,11 +4,24 @@ import { HiOutlineMenu, HiOutlineShoppingBag } from "react-icons/hi";
 import { MdClose, MdOutlineFavoriteBorder } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from "react";
+import { useLocation, Link } from "react-router-dom";
 
 const Header = () => {
+
+  const location = useLocation();
+
   const [toggleMenu, setToggleMenu] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const locationRoute = (route) => {
+    if (location.pathname === route) {
+      return true;
+    }
+  };
+
+
+
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -22,16 +35,54 @@ const Header = () => {
     <>
       <nav className="w-full h-full flex items-center justify-between px-5 xl:px-10 py-5">
         <section className="w-full h-full flex items-center justify-start gap-5 sm:gap-10 xl:gap-20">
+          <Link to="/" >
           <img
             src={logo}
             alt="Urban-Hive logo"
-            className="w-32   object-cover object-center"
+            className="w-32 object-cover object-center"
           />
-          <ul className="hidden lg:flex items-center justify-center gap-10 font-satoshi text-base font-medium text-light-gray">
-            <li>Shop</li>
-            <li>Men</li>
+          </Link>
+          <ul className="hidden lg:flex items-center justify-center gap-10  text-base font-weight-450 text-gray-600">
+          <Link
+              to="/"
+              className={`${
+                locationRoute("/") ? "text-gray-900 font-semibold" : ""
+              }`}
+            >
+              <li>Shop</li>
+            </Link>
+            <Link
+              to="/products/men"
+              className={`${
+                locationRoute("/products/men")
+                  ? "text-gray-900 font-semibold"
+                  : ""
+              }`}
+            >
+              <li>Men</li>
+            </Link>
+            <Link
+            to="/products/women"
+            className={`${
+              locationRoute("/products/women")
+                ? "text-black-100 font-semibold"
+                : ""
+            }`}
+            >
+
             <li>Women</li>
-            <li>Kids</li>
+            </Link>
+            
+            <Link
+              to="/products/kids"
+              className={`${
+                locationRoute("/products/kids")
+                  ? "text-black-100 font-semibold"
+                  : ""
+              }`}
+            >
+              <li>Kids</li>
+            </Link>
           </ul>
         </section>
         <section className="w-full h-full flex items-center justify-end gap-5 sm:gap-10">

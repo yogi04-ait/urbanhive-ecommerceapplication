@@ -12,7 +12,7 @@ const CatgoryCard = ({ img, title, category }) => {
                     className="w-[270px] h-[393px] rounded cursor-pointer object-cover object-center"
                 />
             </div>
-            <a className="w-full flex flex-col justify-between items-start gap-1">
+            <div className="w-full flex flex-col justify-between items-start gap-1">
                 <div className="w-full flex justify-between">
                     <h1 className="text-lg font-semibold text-black-100 capitalize cursor-pointer">
                         {title}
@@ -35,7 +35,7 @@ const CatgoryCard = ({ img, title, category }) => {
                 >
                     Explore Now
                 </p>
-            </a>
+            </div>
 
 
         </section>

@@ -3,9 +3,13 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
 import { animateScroll as scroll } from "react-scroll";
+import { useDispatch } from "react-redux";
+import {addToWishlist, removeItem} from "../redux/favReducer";
 import { toast } from "react-toastify";
 
 const ProductCard = ({ id, img, title, brand, price, isNew }) => {
+    const dispatch = useDispatch();
+
     const [color, setColor] = useState(false);
     const handleNaviagte = () => {
         scroll.scrollToTop({
@@ -13,6 +17,28 @@ const ProductCard = ({ id, img, title, brand, price, isNew }) => {
             smooth: true,
         });
     };
+
+    const handlefav = () => {
+        if (color) {
+          dispatch(removeItem(id))
+          setColor(false);
+          toast.info("Product remove from Wishlist")
+        } else {
+          dispatch(
+            addToWishlist({
+              id,
+              img,
+              title,
+              brand,
+              price,
+              isNew
+            })
+          )
+          setColor(true)
+          toast.success("Product added successfully")
+          
+        }
+      }
 
     return (
         <section className="w-[282px] h-[440px] flex flex-col items-start justify-start gap-2 rounded cursor-pointer">
@@ -34,10 +60,12 @@ const ProductCard = ({ id, img, title, brand, price, isNew }) => {
                     {color ? (
                         <MdOutlineFavorite
                             className="text-red-500 cursor-pointer"
+                            onClick={handlefav}
                         />
                     ) : (
                         <MdOutlineFavoriteBorder
                             className="text-black-100 cursor-pointer"
+                            onClick={handlefav}
                         />
                     )}
                 </section>

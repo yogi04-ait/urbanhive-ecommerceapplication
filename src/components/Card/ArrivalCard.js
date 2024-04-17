@@ -1,13 +1,16 @@
 /* eslint-disable react/prop-types */
 import { animateScroll as scroll } from 'react-scroll';
+import {useNavigate } from 'react-router';
 import Lazy from '../LazyLoading/Lazy';
 
 const ArrivalCard = ({img, title,category, tag}) => {
+  const navigate = useNavigate();
     const handleNavigate = () => {
       scroll.scrollToTop({
         duration: 500,
          smooth: true
        });
+       navigate(`new/${category}/${tag}`)
     }
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
+import { Link } from 'react-router-dom';
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 import HeroCard from "../Card/HeroCard";
@@ -28,8 +29,7 @@ const Hero = () => {
           para="Tops / skirts"
           title1="Women Fashion"
           title2="Collection"
-        //   url={<Link to="/women/dress">Shop Now</Link>}
-           url = "Shop"
+          url={<Link to="/women/dress">Shop Now</Link>}
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -38,7 +38,7 @@ const Hero = () => {
           para="Sweaters / Tops"
           title1="Winter Fashion"
           title2="Collection"
-          url="Shop Now"
+          url={<Link to="/women/sweaters">Shop Now</Link>}
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -47,7 +47,7 @@ const Hero = () => {
           para="kids / dress"
           title1="Kids Fashion"
           title2="Collection"
-          url = "Shop Now"
+          url={<Link to="/products/kids">Shop Now</Link>}
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -56,7 +56,7 @@ const Hero = () => {
           para="T-shits / Jackets"
           title1="Men Fashion"
           title2="Collection"
-          url="Shop Now"
+          url={<Link to="/products/men">Shop Now</Link>}
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -65,7 +65,7 @@ const Hero = () => {
           para="Joggers / Sports"
           title1="Sports Fashion"
           title2="Collection"
-          url="Shop Now"
+          url={<Link to="/women/joggers">Shop Now</Link>}
         />
       </SwiperSlide>
     </Swiper>

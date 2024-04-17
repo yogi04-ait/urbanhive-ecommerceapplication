@@ -1,8 +1,10 @@
 import { animateScroll as scroll } from 'react-scroll';
+import { useNavigate } from 'react-router';
 import { cargo, hawai, oversized, print, urban } from "../../assets";
 import TitleCard from "../Card/TitleCard";
 
 const BigSavingZone = () => {
+  const naviagte = useNavigate();
   return (
     <section className="w-full h-full flex flex-col items-start px-5 xl:px-10 py-10 gap-10">
       <TitleCard title="Big Saving Zone" />
@@ -28,6 +30,8 @@ const BigSavingZone = () => {
                   duration: 500,
                   smooth: true,
                 })
+                naviagte("/hawaii-shirts")
+
               }}
               className="bg-transparent border-[1px] border-white text-white font-medium rounded py-1 px-3 lg:px-4 text-base sm:text-xs md:text-base hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
@@ -57,6 +61,7 @@ const BigSavingZone = () => {
                   duration: 500,
                   smooth: true,
                 })
+                naviagte("/printed-tshirt");
             }}
               className="bg-transparent border-[1px] border-white text-white font-medium rounded py-1 px-3 lg:px-4 text-base sm:text-xs md:text-base  hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
@@ -85,6 +90,7 @@ const BigSavingZone = () => {
                   duration: 500,
                   smooth: true,
                 })
+                naviagte("/cargo-joggers");
               }}
               className="bg-transparent border-[1px] border-black-100 text-black-100 font-medium rounded py-1 px-3 lg:px-4 text-base sm:text-xs md:text-base  hover:bg-gray-700 hover:text-white transition-all duration-300"
             >
@@ -111,6 +117,7 @@ const BigSavingZone = () => {
                   duration: 500,
                   smooth: true,
                 })
+                naviagte("/urban-shirt");
               }}
               className="bg-transparent border-[1px] border-black-100 text-black-100 font-medium rounded py-1 px-3 lg:px-4 text-base sm:text-xs md:text-base  hover:bg-gray-700 hover:text-white transition-all duration-300"
             >
@@ -139,6 +146,7 @@ const BigSavingZone = () => {
                   duration: 500,
                   smooth: true,
                 })
+                naviagte("/oversized-tshirts");
               }}
               className="bg-transparent border-[1px] border-black-100 text-black-100 font-medium rounded py-1 px-3 lg:px-4 text-base sm:text-xs md:text-base  hover:bg-gray-700 hover:text-white transition-all duration-300"
             >

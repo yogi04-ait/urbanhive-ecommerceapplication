@@ -5,7 +5,7 @@ import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
 import { animateScroll as scroll } from "react-scroll";
 import { toast } from "react-toastify";
 
-const ProductCard = ({ img, title, brand, price, isNew, id }) => {
+const ProductCard = ({ id, img, title, brand, price, isNew }) => {
     const [color, setColor] = useState(false);
     const handleNaviagte = () => {
         scroll.scrollToTop({

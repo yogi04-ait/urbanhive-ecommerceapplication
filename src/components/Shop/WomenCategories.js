@@ -1,10 +1,21 @@
-import React from 'react'
-import CatgoryCard from '../Card/CatgoryCard'
-import TitleCard from '../Card/TitleCard'
-import { products } from '../../data/data'
+import CatgoryCard from '../Card/CatgoryCard';
+import TitleCard from '../Card/TitleCard';
+import { products } from '../../data/data';
+import { animateScroll as scroll } from "react-scroll";
+import { useEffect } from 'react';
+
 
 
 const WomenCategories = () => {
+  
+    useEffect(()=>{
+      scroll.scrollToTop({
+        duration: 500,
+        smooth: true,
+    });
+    },[])
+
+
     const category = "women";
     const mencategories = products.filter((cat) => cat.category === category);
     const uniqueTags = new Set();

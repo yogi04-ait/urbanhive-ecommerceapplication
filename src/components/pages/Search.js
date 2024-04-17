@@ -80,6 +80,7 @@ const Search = () => {
                                 <ProductCard
                                     product={item}
                                     id={item.id}
+                                    
                                     img={item.img}
                                     title={item.title}
                                     price={item.price}

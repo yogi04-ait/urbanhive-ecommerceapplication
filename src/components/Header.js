@@ -112,7 +112,7 @@ const Header = () => {
           <Link to="/cart" className="relative hidden lg:block">
             <HiOutlineShoppingBag className="cursor-pointer w-6 h-6 text-light-gray" />
             <span className="w-5 h-5 absolute -top-3 -right-3 bg-red-500 text-white rounded-full flex justify-center items-center text-sm p-2">
-              2
+              {products.length}
             </span>
           </Link>
           <section className="block sm:hidden">

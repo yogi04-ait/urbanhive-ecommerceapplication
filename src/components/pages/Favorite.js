@@ -4,7 +4,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import TitleCard from "../Card/TitleCard";
 import { GiShoppingBag } from "react-icons/gi";
 import { MdOutlineFavorite } from "react-icons/md";
-import { removeItem } from "../redux/cartReducer";
+import { removeItem } from "../redux/favReducer";
 import { useNavigate } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -21,7 +21,7 @@ const Favorite = () => {
         <section className="w-full h-full flex flex-wrap items-center gap-10">
           {products.length === 0 ? (
             <div className="w-full h-full flex flex-col items-center justify-center gap-5">
-              <GiShoppingBag className="text-7xl text-dark-violet" />
+              <GiShoppingBag className="text-7xl text-blue-800" />
               <article className="flex flex-col items-center justify-center">
                 <h3 className="text-2xl font-medium">
                   Hey, It feels so light!
@@ -30,7 +30,7 @@ const Favorite = () => {
                   There is nothing in your wishlist
                 </p>
               </article>
-              <button className="text-white bg-dark-violet px-6 py-2 font-normal rounded">
+              <button className="text-white bg-blue-800 px-6 py-2 font-normal rounded">
                 Add Products
               </button>
             </div>
@@ -63,7 +63,6 @@ const Favorite = () => {
                       className="text-red-500 cursor-pointer"
                       onClick={() => {
                         dispatch(removeItem(item.id));
-                        
                       }}
                     />
                   </section>
@@ -87,7 +86,7 @@ const Favorite = () => {
                     >
                       {item.title}
                     </h1>
-                    <p className="text-light-gray-100 text-xs lg:text-sm capitalize">
+                    <p className="text-gray-500 text-xs lg:text-sm capitalize">
                       {item.brand}
                     </p>
                   </div>

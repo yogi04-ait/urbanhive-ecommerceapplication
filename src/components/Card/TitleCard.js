@@ -6,7 +6,6 @@ const TitleCard = ({ title }) => {
         <h1 className="text-black-100 font-semibold text-xl sm:text-2xl md:text-3xl capitalize">
           {title}
         </h1>
-        
       </main>
     );
   };

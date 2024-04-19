@@ -5,10 +5,12 @@ import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
 import { animateScroll as scroll } from "react-scroll";
 import { useDispatch } from "react-redux";
 import {addToWishlist, removeItem} from "../redux/favReducer";
+import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 
 const ProductCard = ({ id, img, title, brand, price, isNew }) => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [color, setColor] = useState(false);
     const handleNaviagte = () => {
@@ -16,6 +18,7 @@ const ProductCard = ({ id, img, title, brand, price, isNew }) => {
             duration: 500,
             smooth: true,
         });
+        navigate(`/product/${id}`);
     };
 
     const handlefav = () => {
@@ -79,7 +82,7 @@ const ProductCard = ({ id, img, title, brand, price, isNew }) => {
             <article className="w-full flex items-center justify-between gap-2">
                 <div className="w-full flex flex-col justify-between">
                     <h1
-                        className="text-base font-medium text-black-100"
+                        className="text-base font-medium text-gray-700"
                     >
                         {title}
                     </h1>

@@ -29,7 +29,7 @@ const WomenCategories = () => {
 
   return (
     <section className="w-full h-full flex flex-col items-start px-5 xl:px-10 py-10 gap-10">
-    <TitleCard title="Categories For Men" />
+    <TitleCard title="Categories For Women" />
     {console.log(uniqueMencategories)}
     <section className="w-full h-full flex flex-row gap-10 overflow-x-scroll">
       {uniqueMencategories?.map((cat) => (

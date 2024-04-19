@@ -130,7 +130,7 @@ const Cart = () => {
               </section>
               <section className="">
                 <button
-                  className="bg-dark-violet text-white text-lg font-medium px-6 py-2 rounded "
+                  className="bg-purple-600 text-white text-lg font-medium px-6 py-2 rounded "
                   onClick={() => dispatch(removeItem(item.id))}
                 >
                   Remove
@@ -142,7 +142,7 @@ const Cart = () => {
         {products.length !== 0 && (
           <section className="w-full h-full max-w-4xl mx-auto mt-10 flex items-end">
             <button
-              className="w-28 h-10 flex items-center justify-center gap-2 bg-dark-violet font-medium text-white rounded"
+              className="w-28 h-10 flex items-center justify-center gap-2 bg-purple-600 font-medium text-white rounded"
               onClick={goBack}
             >
               <BsArrowLeft /> Back
@@ -155,7 +155,7 @@ const Cart = () => {
               <p className="text-light-gray-100 text-sm font-satoshi font-normal">
                 Taxes and shipping are calculated at checkout
               </p>
-              <button onClick={goToBilling} className="bg-dark-violet px-6 text-white py-2 font-medium rounded">
+              <button onClick={goToBilling} className="bg-purple-600 px-6 text-white py-2 font-medium rounded">
                 Purchase now
               </button>
             </section>

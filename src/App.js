@@ -8,7 +8,7 @@ import Product from "./components/pages/Product";
 import NewProducts  from "./components/pages/NewProducts";
 import Products from "./components/pages/Products";
 import BrandProducts from "./components/pages/BrandProducts";
-import HawaiiShirts from "./components/pages/HawaiiShirts"
+import HawaiiShirts from "./components/pages/BigSavingProduct/HawaiiShirts";
 import CargoJoggers from "./components/pages/BigSavingProduct/CargoJoggers";
 import OversizedTshirts from "./components/pages/BigSavingProduct/OversizedTshirts";
 import PrintedTshirts from "./components/pages/BigSavingProduct/PrintedTshirts";

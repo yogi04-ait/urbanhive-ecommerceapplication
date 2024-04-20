@@ -1,14 +1,11 @@
 import { useDispatch, useSelector } from "react-redux"
 import Lazy from "../LazyLoading/Lazy";
 import TitleCard from "../Card/TitleCard"
-import { animateScroll as scroll } from "react-scroll"
 import { GiShoppingBag } from "react-icons/gi"
 import { removeItem, updateQuantity } from "../redux/cartReducer"
 import { BsArrowLeft } from "react-icons/bs"
-import { useNavigate } from "react-router"
 
 const Cart = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state)=>state.cart.clothes);
   
@@ -31,13 +28,7 @@ const Cart = () => {
     return total.toFixed(2);
   };
 
-  const goToBilling = () => {
-    scroll.scrollToTop({
-      duration: 500,
-      smooth: true,
-    });
-    navigate("/billing", { state: { products } });
-  };
+  
 
   return (
     <>
@@ -155,7 +146,7 @@ const Cart = () => {
               <p className="text-light-gray-100 text-sm font-satoshi font-normal">
                 Taxes and shipping are calculated at checkout
               </p>
-              <button onClick={goToBilling} className="bg-purple-600 px-6 text-white py-2 font-medium rounded">
+              <button  className="bg-purple-600 px-6 text-white py-2 font-medium rounded">
                 Purchase now
               </button>
             </section>

@@ -1,11 +1,14 @@
 import { animateScroll as scroll } from "react-scroll";
 import Lazy from "../LazyLoading/Lazy";
 import { Brands } from "../../data/data";
+import { useNavigate } from "react-router";
 
 
 import React from 'react'
 
 const Brand = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="w-full h-full px-5 xl:px-10 py-10">
     <main className="w-full h-fit bg-gray-700 flex flex-col items-center justify-center gap-10 rounded-md px-10 py-20">
@@ -25,6 +28,7 @@ const Brand = () => {
                 duration: 500,
                 smooth: true,
               });
+              navigate(`/products/brand/${brand.brand}`);
             }}
             key={brand.brand}
           >

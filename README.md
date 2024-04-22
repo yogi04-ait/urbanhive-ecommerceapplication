@@ -23,14 +23,11 @@ Euphoria is a modern and user-friendly Online Shopping Platform for Men, Women &
 - React Router Dom
 - React Icons
 - Redux Toolkit
-- react-helmet-async
 - react-lazy-load-image-component
 - react-select
 - react-toastify
 - swiper
-- Canvas Confetti
 - Redux Persist
-- bugfender/SDK
   
 
 ## Installation
